@@ -8,7 +8,10 @@ const animations = [
   "scale",
   "changing height and width",
   "changing background",
-  "rotate"
+  "rotate",
+  "spring",
+  "event",
+  "decay"
 ];
 class List extends React.Component {
   render() {

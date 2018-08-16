@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  StyleSheet
+} from "react-native";
 import List from "../components/basics/List";
 import Opacity from "../components/basics/Opacity";
 import Translate from "../components/basics/Translate";
@@ -7,6 +13,9 @@ import Scale from "../components/basics/Scale";
 import HeightWidth from "../components/basics/HeightWidth";
 import ChangingBackground from "../components/basics/ChangingBackground";
 import Rotate from "../components/basics/Rotate";
+import Spring from "../components/basics/Spring";
+import AnimatedEvent from "../components/basics/AnimatedEvent";
+import Decay from "../components/basics/Decay";
 
 class Basics extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -35,6 +44,12 @@ class Basics extends React.Component {
         return <ChangingBackground />;
       case 5:
         return <Rotate />;
+      case 6:
+        return <Spring />;
+      case 7:
+        return <AnimatedEvent />;
+      case 8:
+        return <Decay />;
       default:
         return <Translate />;
     }
@@ -43,18 +58,21 @@ class Basics extends React.Component {
     if (this.state.showContent) {
       return (
         <View style={styles.container}>
+          {this.renderAnimation()}
           <TouchableOpacity
             onPress={() => this.setState({ showContent: false })}
-            style={{ position: "absolute", bottom: 10 }}
+            style={{ position: "absolute", bottom: 10, elevation: 10 }}
           >
             <Text>GO Back </Text>
           </TouchableOpacity>
-
-          {this.renderAnimation()}
         </View>
       );
     }
-    return <List onPress={this.onListItemPress} />;
+    return (
+      <ScrollView style={{ marginTop: 50 }}>
+        <List onPress={this.onListItemPress} />
+      </ScrollView>
+    );
   };
   render() {
     return <View style={{ flex: 1 }}>{this.renderContent()}</View>;
