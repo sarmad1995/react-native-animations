@@ -4,9 +4,11 @@ import { Card } from "react-native-elements";
 
 const animations = [
   "opacity",
-  "transform",
+  "translate",
   "scale",
-  "changing height and width"
+  "changing height and width",
+  "changing background",
+  "rotate"
 ];
 class List extends React.Component {
   render() {

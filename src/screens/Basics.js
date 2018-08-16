@@ -5,6 +5,8 @@ import Opacity from "../components/basics/Opacity";
 import Translate from "../components/basics/Translate";
 import Scale from "../components/basics/Scale";
 import HeightWidth from "../components/basics/HeightWidth";
+import ChangingBackground from "../components/basics/ChangingBackground";
+import Rotate from "../components/basics/Rotate";
 
 class Basics extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -29,6 +31,10 @@ class Basics extends React.Component {
         return <Scale />;
       case 3:
         return <HeightWidth />;
+      case 4:
+        return <ChangingBackground />;
+      case 5:
+        return <Rotate />;
       default:
         return <Translate />;
     }

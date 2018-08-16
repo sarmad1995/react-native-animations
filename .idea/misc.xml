@@ -5,7 +5,7 @@
   </component>
   <component name="ReactNativePackager" nodePath="project" reactNativePackagePath="/usr/local/lib/node_modules/react-native-cli" workingDirectory="$PROJECT_DIR$">
     <scripts>
-      <item value="start" />
+      <item value="ios" />
     </scripts>
   </component>
 </project>
