@@ -11,7 +11,8 @@ const animations = [
   "rotate",
   "spring",
   "event",
-  "decay"
+  "decay",
+  "combining"
 ];
 class List extends React.Component {
   render() {

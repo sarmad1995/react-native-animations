@@ -16,6 +16,7 @@ import Rotate from "../components/basics/Rotate";
 import Spring from "../components/basics/Spring";
 import AnimatedEvent from "../components/basics/AnimatedEvent";
 import Decay from "../components/basics/Decay";
+import CombineAnimation from "../components/basics/CombineAnimation";
 
 class Basics extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -50,6 +51,8 @@ class Basics extends React.Component {
         return <AnimatedEvent />;
       case 8:
         return <Decay />;
+      case 9:
+        return <CombineAnimation />;
       default:
         return <Translate />;
     }
